@@ -15,6 +15,7 @@ function handleSubmit(event) {
         document.getElementById('agreement').innerHTML = response.agreement;
         document.getElementById('subjectivity').innerHTML = response.subjectivity;
         document.getElementById('confidence').innerHTML = response.confidence;
+        document.getElementById('error').innerHTML = '';
     })
     .catch(error =>{
         document.getElementById('error').innerHTML = 'Something went wrong!';
