@@ -1,10 +1,14 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Montserrat';
+    font-weight: 500;
+}
+
 body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
     background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgb(216, 216, 216) 100%);
-    font-family: 'Montserrat';
-    font-weight: 500;
     padding: 0;
     margin: 0;
 }
@@ -13,7 +17,45 @@ main {
     flex: 2;
 }
 
-section {
-    max-width: 800px;
-    margin: 50px auto;
+section, form {
+    height: fit-content;
+    width: 80%;
+    margin: 15px auto;
+    padding: 25px;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    position: relative;
+    box-shadow:
+        -7px -7px 20px 0px #fff9,
+        -4px -4px 5px 0px #fff9,
+        7px 7px 20px 0px #0002,
+        4px 4px 5px 0px #0001;
+    border-radius: 10px;
+}
+
+h1 {
+    grid-area: hd;
+    font-size: 60px;
+    font-weight: 1000;
+    text-align: left;
+    box-sizing: border-box;
+    padding-left: 25px;
+    width: fit-content;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    flex-direction: column;
+    margin: 15px auto;
+    width: 80%;
 }

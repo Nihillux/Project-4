@@ -9,27 +9,27 @@
 
         <header>
             <div class="">
-                Logo
+                <h1>NLP</h1>
             </div>
             <div class="">
-                navigation
+                Web tool that allows users to run a text through the MeaningCloud API to analize it.
             </div>
         </header>
 
         <main>
-            <section>
+            <section id="card">
                 <form id="form"><!-- class="" action="/test" method="post" onsubmit="return Client.handleSubmit(event)"> -->
-                    <input id="text" type="text" name="name" value="" placeholder="Name">
+                    <input id="text" type="text" name="name" value="" placeholder="Enter your text and submit it.">
                     <button id="generate" type="submit" name="" value="submit"><!--onclick="return Client.handleSubmit(event)" onsubmit="return Client.handleSubmit(event)"--> Submit</button>
                 </form>
             </section>
 
             <section>
-                <strong>Form Results:</strong>
+                <div><span>Form Results:</span></div>
                 <div id="results">
-                    <div id="agreement"></div>
-                    <div id="subjectivity"></div>
-                    <div id="confidence"></div>
+                    <p>Agreement:</p><div id="agreement"></div>
+                    <p>Subjectivity:</p><div id="subjectivity"></div>
+                    <p>Confidence:</p><div id="confidence"></div>
                     <div id="error"></div>
                 </div>
             </section>
@@ -38,6 +38,14 @@
         <footer>
             <p>Nihillux 2022 &copy</p>
         </footer>
-
+        <script>
+            // Check that service workers are supported
+            if ('serviceWorker' in navigator) {
+                // Use the window load event to keep the page load performant
+                window.addEventListener('load', () => {
+                    navigator.serviceWorker.register('/service-worker.js');
+                });
+            }
+           </script>
     </body>
 </html>
